@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectCardComponent } from '../project-card/project-card.component';
-import { projects } from '../data/projects.data';
+import { ProjectsService } from '../_services/projects.service';
+import { Project } from '../_models/Project';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { Tag } from '../_models/Tag';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,13 +15,12 @@ import { projects } from '../data/projects.data';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent implements OnInit {
-  projects: any;
+  projects: Project[];
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Deyvid Santos - Portfolio');
   }
   ngOnInit(): void {
-    this.projects = projects;
+    this.projects = this.projectService.getProjects();
   }
-
 }

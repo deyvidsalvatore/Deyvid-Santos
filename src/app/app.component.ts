@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from "./nav/nav.component";
+import { Title } from '@angular/platform-browser';
+
+declare var particlesJS: any;
 
 @Component({
     selector: 'app-root',
@@ -11,5 +14,15 @@ import { NavComponent } from "./nav/nav.component";
     imports: [RouterOutlet, HeaderComponent, NavComponent]
 })
 export class AppComponent {
-  title = 'salvatore-portfolio';
+
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Deyvid Santos');
+  }
+
+  ngOnInit() {
+    particlesJS.load('particles', 'assets/particles.json', () => {
+      console.log('callback - particles.js config loaded');
+    });
+  }
+  
 }

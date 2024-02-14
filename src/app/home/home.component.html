@@ -2,7 +2,7 @@
     <div class="row">
         <!-- About me -->
         <div class="col-lg shadow border m-1">
-            <div class="text-center mt-1">
+            <div class="text-center mt-2">
                 <h2>About me</h2>
                 <img src="assets/deyvid.jpg" alt="foto do deyvid" width="190" height="240" class="rounded-circle">
                 <p class="mt-1">Hello, I'm Deyvid Santos, a passionate software engineer from Brazil. With expertise in Java and Spring Boot, I specialize in developing robust and scalable backend solutions. I thrive on solving complex problems and collaborating effectively with multidisciplinary teams.</p>
@@ -10,8 +10,33 @@
         </div>
         <!-- Featured Project -->
         <div class="col-lg shadow border m-1">
-            <div class="mt-1">
+            <div class="text-center mt-2">
                 <h2>Featured Project</h2>
+                <h3>{{ featuredProject.name }}</h3>
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        @for (picture of featuredProject.pictures; track $index) {
+                            <button type="button" data-bs-target="#myCarousel" [attr.data-bs-slide-to]="$index" [class.active]="$index === 0" class="indicator-button"></button>
+                        }
+                    </div>
+                    
+                    <div class="carousel-inner">
+                      @for (picture of featuredProject.pictures; track $index) {
+                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}" data-bs-interval="2000">
+                            <img [src]="featuredProject.pictures[$index]" class="d-block w-100" alt="{{'Screenshot ' + ($index + 1)}}">
+                          </div>
+                      }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+
+                  <p class="mt-2">{{featuredProject.summary}}</p>
+                  <p>Visit the <a routerLink="/portfolio">portfolio section</a> to see more about it</p>
             </div>
         </div>
     </div>

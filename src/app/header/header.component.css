@@ -1,4 +1,16 @@
 .jumbotron {
     padding: 2rem 1rem;
-    background-color: #E9ECEF;
+    background-color: #111111;
+}
+
+.header-container {
+    position: relative;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
