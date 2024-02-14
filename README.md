@@ -1,27 +1,11 @@
-# SalvatorePortfolio
+# Deyvid Santos - Portfolio
+Welcome to my portfolio app, fell free to clone it and modify on your own 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+## About Me
+I'm Deyvid Santos, a dedicated software engineer hailing from Brazil. With a passion for crafting innovative solutions, I specialize in developing robust web services using Java and Spring Boot. Beyond my technical expertise, I also thrive in fostering a collaborative environment that encourages creativity and continuous learning.
 
-## Development server
+## Contact
+Feel free to reach out to me via email at <a href="mailto:deyvidsantosdasilva2002">e-mail</a>. Let's connect and discuss exciting opportunities! 📧
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Let's embark on this journey together, where we can innovate, learn, and create software that makes a meaningful impact! 
+Looking forward to collaborating with you! 🤝
