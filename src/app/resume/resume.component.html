@@ -1,1 +1,135 @@
-<p>resume works!</p>
+<div class="container text-center">
+  <button (click)="downloadResume()" class="btn btn-primary mt-1 mb-5 shadow-border">
+    Download My PDF Resume
+  </button>
+
+  <div ngbAccordion>
+
+    <!-- Work Experience -->
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>Work Experience</button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <div style="text-align: left;">
+                <h3 class="mb-0">👨🏻‍💻 Internship Back-end Journey</h3>
+                <h4 class="text-primary">Compass UOL</h4>
+                <ul>
+                    <li>Engaged in a comprehensive training program covering JAVA, Agile methodologies, Git, Cybersecurity</li>
+                    <li>Specialized in development using AWS Console, SQL, NoSQL, Containers, AWS CLI, Spring Boot, APIs, Application Testing, Microservices, RabbitMQ, Spring Security,</li>
+                    <li>Participated in extracurricular project as OOP Java and Spring Course Instructor</li>
+                </ul>
+            </div>
+          </ng-template>
+        </div>
+        <div ngbAccordionBody>
+            <ng-template>
+                <div style="text-align: left;">
+                    <h3 class="mb-0">👨🏻‍💻 Academy Code Java and Spring Instructor</h3>
+                    <h4 class="text-primary">UNIFG</h4>
+                    <ul>
+                        <li>I taught Java principles in the object-oriented paradigm.</li>
+                        <li>I worked on the main projects in the booklet and acted as one of the authors alongside my colleagues</li>
+                        <li>We explored the fundamental concepts of Modern Java with Spring Boot looking at dependency injection, JPA projects, RESTful architecture, best practices for handling responses and handling exceptions.</li>
+                    </ul>
+                </div>
+            </ng-template>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>Education</button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <div style="text-align: left;">
+                <h3 class="mb-0">📚 Bacharelor's in Computer Science</h3>
+                <h4 class="text-primary">UNIFG</h4>
+                <ul>
+                    <li>Graduated from UNIFG in December 2023</li>
+                    <li>Graduated with 3.8 GPA</li>
+                    <li>Participated in extracurricular project as OOP Java and Spring Course Instructor</li>
+                </ul>
+            </div>
+          </ng-template>
+        </div>
+        <div ngbAccordionBody>
+            <ng-template>
+              <div style="text-align: left;">
+                  <h3 class="mb-0">📚 Post-Degree's in Software Engineering</h3>
+                  <h4 class="text-primary">Descomplica</h4>
+                  <ul>
+                      <li>Graduation scheduled for August/2024</li>
+                      <li>Specialization in software architecture and composition</li>
+                      <li>Working with main engineering technologies and agile methodologies</li>
+                  </ul>
+              </div>
+            </ng-template>
+          </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>Skills</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div class="row" style="text-align: left;">
+                <div class="col">
+                    <h3>🔤 Programming Languages</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Ruby</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>⚙️ Frameworks</h3>
+                    <ul>
+                        <li>Angular</li>
+                        <li>React</li>
+                        <li>Spring Framework</li>
+                        <li>Ruby On Rails</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Certifications -->
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>Certifications</button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            <div style="text-align: left;">
+                @for(certification of certifications; track $index) {
+                  <h3>🎓 {{certification.title}}</h3>
+                  <ul>
+                      <li>Obtained on {{certification.obtained}}</li>
+                      <li><a [href]="certification.link" target="_blank">Link to certification</a></li>
+                  </ul>
+                }
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
